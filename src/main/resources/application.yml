@@ -1,0 +1,43 @@
+server:
+  port: 7654
+  servlet:
+    context-path: /Register
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: shivdahale2412@gmail.com
+    password: 744826spd...
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetime: 5000
+          starttls:
+            enable: true
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  datasource:
+    driverClassName: org.h2.Driver
+    password: null
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+twilio:
+  account_sid: AC7df0e8e1f3ffd28d84c8c88799f30039
+  auth_token: cab1957144abcda485db87b4777c5d1e
+  trial_number: +12515125687
